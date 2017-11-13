@@ -1,0 +1,22 @@
+{
+  "orientation" : 90,
+  "updateDelay" : 0.3,
+  "designModeSelected" : 0,
+  "cachedDeviceHeight" : 768,
+  "contentScale" : 1,
+  "cachedDeviceWidth" : 1024,
+  "fullScreen" : false,
+  "deviceType" : "google-nexus-9",
+  "sharedPrototype" : 0,
+  "propertyPanelToggleStates" : {
+
+  },
+  "projectId" : "B9A5E76C-D58E-4A93-93FA-99600B82AA96",
+  "deviceOrientation" : 90,
+  "selectedHand" : "",
+  "showBezel" : true,
+  "foldedCodeRanges" : [
+    "{0, 159}"
+  ],
+  "deviceScale" : "fit"
+}

@@ -9,12 +9,13 @@ sComp_appUpdate=new ScrollComponent
 	scrollHorizontal: false
 	directionLock: true
 	contentInset: 
-		top: 248
+		top: 250
+		bottom:60
 sComp_appUpdate.sendToBack()	
 pgComp_appUpdate=new PageComponent
 	parent: sComp_appUpdate.content
 	width: hd_appUpdate.width
-	height: 768
+	height: 810
 	scrollVertical: false
 pg_1.parent=pgComp_appUpdate.content
 pgComp_appUpdate.addPage(pg_2, "right")

@@ -1,4 +1,5 @@
 
+
 #--------Screen:App Update--------#
 sComp_appUpdate=new ScrollComponent
 	parent: content_appUpdate
@@ -59,14 +60,15 @@ sComp_appUpdate.onMove ->
 #----Screen:Restoration----#
 sComp_restore=new ScrollComponent
 	width: 934
-	height: 769
+	height: 696
+	y: 24
 	x: 90
 	parent: Home
 	scrollHorizontal: false
 	visible: false
 	backgroundColor: "#FF7424"
 	contentInset: 
-		bottom: 40
+		bottom: 100
 content_restore.parent=sComp_restore.content
 #----END Restoration----#
 
@@ -119,7 +121,33 @@ btn_restore.onTapEnd ->
 #-------END Tab interaction-------#
 
 
+# Set up FlowComponent
+flow = new FlowComponent
+flow.showNext(Home)
+
+# Switch on click
+btn_gallery.onClick ->
+	flow.showOverlayCenter(screen_gallery)
+
 #-------------System Bar---------------#
 statusBar.bringToFront()
 navBar.bringToFront()
 #-------------END System Bar---------------#
+
+#--------Gallery---------#
+pgComp_gallery=new PageComponent
+	parent: screen_gallery
+	width: screen_gallery.width
+	height: screen_gallery.height
+	scrollVertical: false
+pgComp_gallery.sendToBack()
+img_1.parent=pgComp_gallery.content
+pgComp_gallery.addPage(img_2, "right")
+pgComp_gallery.addPage(img_3, "right")
+
+btn_close.onTapEnd ->
+	flow.showPrevious()
+#--------END Gallery---------#
+	
+
+

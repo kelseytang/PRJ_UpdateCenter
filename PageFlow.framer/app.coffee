@@ -120,14 +120,34 @@ btn_restore.onTapEnd ->
 	hideContent(tabNum)
 #-------END Tab interaction-------#
 
+prepare.states=
+	hide:
+		opacity:0
+		animationOptions:
+			time:.3
+	show:
+		opacity: 1
+		animationOptions:
+			time:.3
 
 # Set up FlowComponent
 flow = new FlowComponent
 flow.showNext(Home)
 
 # Switch on click
-btn_gallery.onClick ->
+btn_gallery.onTapEnd ->
 	flow.showOverlayCenter(screen_gallery)
+btn_download.onTapEnd ->
+	prepare.visible=true
+	prepare.bringToFront()
+	prepare.animate("show")
+	Utils.delay 2, ->
+		prepare.animate("hide")
+	Utils.delay 2.5, ->
+		prepare.visible=false
+		flow.showOverlayCenter(screen_battery)
+img_battery.onTapEnd ->
+	flow.showPrevious()
 
 #-------------System Bar---------------#
 statusBar.bringToFront()

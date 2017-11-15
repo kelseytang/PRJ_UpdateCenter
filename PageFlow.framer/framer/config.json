@@ -9,9 +9,9 @@
   "deviceType" : "google-nexus-9",
   "sharedPrototype" : 0,
   "propertyPanelToggleStates" : {
-    "Filters" : false
+
   },
-  "projectId" : "B9A5E76C-D58E-4A93-93FA-99600B82AA96",
+  "projectId" : "6D8A8083-BAEC-4125-A103-7CAF2C45773C",
   "deviceOrientation" : 90,
   "selectedHand" : "",
   "showBezel" : true,
@@ -20,7 +20,7 @@
     "{1382, 286}",
     "{1669, 121}",
     "{1791, 954}",
-    "{3032, 384}"
+    "{3422, 384}"
   ],
   "deviceScale" : "fit"
 }
